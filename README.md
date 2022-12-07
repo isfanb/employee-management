@@ -14,6 +14,8 @@ Then open your terminal and run this code to install all module
 
 ## Run Json-server
 
+Type this code on your terminal to watch all of data on your server
+
 `json-server --watch db.json`
 
 ## Development server
