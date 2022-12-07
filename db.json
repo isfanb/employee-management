@@ -1,0 +1,260 @@
+{
+  "posts": [
+    {
+      "username": "adeliavina",
+      "firstname": "adelia",
+      "lastname": "vina",
+      "email": "adeliavina@mail.us",
+      "birthdate": "1890-03-22",
+      "basicsalary": 2300000,
+      "status": "staff",
+      "group": "Two",
+      "description": "2021-12-22",
+      "id": 1
+    },
+    {
+      "username": "agnesyustian",
+      "firstname": "agnes",
+      "lastname": "yustian",
+      "email": "agnes@mail.us",
+      "birthdate": "2002-02-20",
+      "basicsalary": 1200000,
+      "status": "non-staff",
+      "group": "Four",
+      "description": "2021-02-20",
+      "id": 2
+    },
+    {
+      "username": "anandarizky",
+      "firstname": "ananda",
+      "lastname": "rizky",
+      "email": "rizky@mail.co",
+      "birthdate": "1990-01-01",
+      "basicsalary": 6400000,
+      "status": "staff",
+      "group": "Two",
+      "description": "2021-04-06",
+      "id": 3
+    },
+    {
+      "username": "aryasetiaji",
+      "firstname": "arya",
+      "lastname": "setiaji",
+      "email": "arya@navmail.co",
+      "birthdate": "1989-05-25",
+      "basicsalary": 7100000,
+      "status": "staff",
+      "group": "Seven",
+      "description": "2010-12-12",
+      "id": 4
+    },
+    {
+      "username": "davarizki",
+      "firstname": "dava",
+      "lastname": "rizki",
+      "email": "dava@mail.us",
+      "birthdate": "2001-03-28",
+      "basicsalary": 4500000,
+      "status": "non-staff",
+      "group": "Eight",
+      "description": "2018-12-22",
+      "id": 5
+    },
+    {
+      "username": "dayanaditya",
+      "firstname": "dayan",
+      "lastname": "aditya",
+      "email": "dayanaditya@mail.us",
+      "birthdate": "1890-03-22",
+      "basicsalary": 2300000,
+      "status": "staff",
+      "group": "Two",
+      "description": "2021-12-22",
+      "id": 6
+    },
+    {
+      "username": "dinamukti",
+      "firstname": "dina",
+      "lastname": "mukti",
+      "email": "dinamukti@mail.us",
+      "birthdate": "2002-02-20",
+      "basicsalary": 1200000,
+      "status": "non-staff",
+      "group": "Four",
+      "description": "2021-02-20",
+      "id": 7
+    },
+    {
+      "username": "ezrasamuel",
+      "firstname": "ezra",
+      "lastname": "samuel",
+      "email": "samuel@mail.co",
+      "birthdate": "1990-01-01",
+      "basicsalary": 6400000,
+      "status": "staff",
+      "group": "Two",
+      "description": "2021-04-06",
+      "id": 8
+    },
+    {
+      "username": "farrelindratama",
+      "firstname": "farrel",
+      "lastname": "indratama",
+      "email": "farrel@navmail.co",
+      "birthdate": "1989-05-25",
+      "basicsalary": 7100000,
+      "status": "staff",
+      "group": "Seven",
+      "description": "2010-12-12",
+      "id": 9
+    },
+    {
+      "username": "fikriluthfi",
+      "firstname": "fikri",
+      "lastname": "luthfi",
+      "email": "fikriluthfi@mail.us",
+      "birthdate": "2001-03-28",
+      "basicsalary": 4500000,
+      "status": "non-staff",
+      "group": "Eight",
+      "description": "2018-12-22",
+      "id": 10
+    },
+    {
+      "username": "fitriyah",
+      "firstname": "fitriyah",
+      "lastname": "-",
+      "email": "fitriyah@mail.co.id",
+      "birthdate": "1999-11-11",
+      "basicsalary": 4000000,
+      "status": "staff",
+      "group": "Nine",
+      "description": "2019-12-11",
+      "id": 11
+    },
+    {
+      "username": "kurniaeka",
+      "firstname": "kurnia",
+      "lastname": "eka",
+      "email": "kurniaeka@mail.co.id",
+      "birthdate": "2000-09-29",
+      "basicsalary": 2900000,
+      "status": "non-staff",
+      "group": "Nine",
+      "description": "2021-12-12",
+      "id": 12
+    },
+    {
+      "username": "rizalfadillah",
+      "firstname": "rizal",
+      "lastname": "fadillah",
+      "email": "rizalfadillah@navmail.us",
+      "birthdate": "1992-12-21",
+      "basicsalary": 1200000,
+      "status": "staff",
+      "group": "Ten",
+      "description": "2022-01-01",
+      "id": 13
+    },
+    {
+      "username": "nabillaputri",
+      "firstname": "nabilla",
+      "lastname": "putri",
+      "email": "nabilla@mail.co",
+      "birthdate": "2003-12-12",
+      "basicsalary": 3000000,
+      "status": "non-staff",
+      "group": "Three",
+      "description": "2022-12-28",
+      "id": 14
+    },
+    {
+      "username": "nadyaputri",
+      "firstname": "nadya",
+      "lastname": "putri",
+      "email": "nadyaputri@mail.com",
+      "birthdate": "2001-06-27",
+      "basicsalary": 3000000,
+      "status": "non-staff",
+      "group": "Four",
+      "description": "2020-02-17",
+      "id": 15
+    },
+    {
+      "username": "nikennovelia",
+      "firstname": "niken",
+      "lastname": "novelia",
+      "email": "nikennovelia@mail.co.id",
+      "birthdate": "1999-11-11",
+      "basicsalary": 4000000,
+      "status": "staff",
+      "group": "Nine",
+      "description": "2019-12-11",
+      "id": 16
+    },
+    {
+      "username": "nilaandriani",
+      "firstname": "nila",
+      "lastname": "andriani",
+      "email": "nila@mail.co.id",
+      "birthdate": "2000-09-29",
+      "basicsalary": 2900000,
+      "status": "non-staff",
+      "group": "Nine",
+      "description": "2021-12-12",
+      "id": 17
+    },
+    {
+      "username": "nurulamalia",
+      "firstname": "nurul",
+      "lastname": "amalia",
+      "email": "nurulamalia@navmail.us",
+      "birthdate": "1992-12-21",
+      "basicsalary": 1200000,
+      "status": "staff",
+      "group": "Ten",
+      "description": "2022-01-01",
+      "id": 18
+    },
+    {
+      "username": "rafikaayu",
+      "firstname": "rafika",
+      "lastname": "ayu",
+      "email": "rafika@mail.co",
+      "birthdate": "2003-12-12",
+      "basicsalary": 3000000,
+      "status": "non-staff",
+      "group": "Three",
+      "description": "2022-12-28",
+      "id": 19
+    },
+    {
+      "username": "rizkiramadhan",
+      "firstname": "rizki",
+      "lastname": "ramadhan",
+      "email": "rizkiramadhan@mail.com",
+      "birthdate": "2001-06-27",
+      "basicsalary": 3000000,
+      "status": "non-staff",
+      "group": "Four",
+      "description": "2020-02-17",
+      "id": 20
+    }
+  ],
+  "signup": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "fullname": "budi sudarsono",
+      "email": "budi@mail.com",
+      "password": "budi",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,140 @@
+<div class="col-lg-12 col-md-10 col-sm-12 m-auto">
+  <nav class="navbar bg-light d-flex justify-content-between">
+    <h1 class="navbar-brand mx-3">List of Employee</h1>
+    <div>
+      <button
+        type="button"
+        class="btn btn-primary mx-1"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+      <i class="fa fa-plus"></i> Add Employee
+      </button>
+      <a routerLink="/login" type="submit" class="btn btn-danger mx-3">
+        <i class="fa fa-power-off"></i> Logout
+      </a>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Employee Data</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="modal-body" [formGroup]="formValue" *ngIf="formValue">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Username</label>
+                <input type="text" class="form-control" formControlName="username" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                <input type="text" class="form-control" formControlName="firstname" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                <input type="text" class="form-control" formControlName="lastname" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Birth Date</label>
+                <input type="date" class="form-control" formControlName="birthdate" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Basic Salary</label>
+                <input type="number" class="form-control" formControlName="basicsalary" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Status</label>
+                <input type="text" class="form-control" formControlName="status" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Group</label>
+                <select class="form-control" formControlName="group" id="exampleFormControlInput1">
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                  <option>Four</option>
+                  <option>Five</option>
+                  <option>Six</option>
+                  <option>Seven</option>
+                  <option>Eight</option>
+                  <option>Nine</option>
+                  <option>Ten</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Description</label>
+                <input type="date" class="form-control" formControlName="description" id="exampleFormControlInput1">
+            </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" [disabled]="!formValue.valid" (click)="postEmployeeList()" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="input-group my-3 w-25">
+    <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: beige;"
+      ><i class="fa fa-search"></i></span
+    >
+    <input
+      type="text"
+      class="form-control"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default"
+      placeholder="search by name"
+      [(ngModel)]="filterTerm"
+    />
+    <label style="position: relative; left: 75em; top: .30em;">Items per page:
+      <select id="pageDefault" [(ngModel)]="itemsPerPage">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+    </label>
+  </div>
+  <table class="table">
+    <thead style="background-color: beige;">
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Username</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Birth Date</th>
+        <th scope="col">Basic Salary</th>
+        <th scope="col">Status</th>
+        <th scope="col">Group</th>
+        <th scope="col">Description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeeFullList | filter: filterTerm | paginate: { itemsPerPage: itemsPerPage, currentPage: page }">
+        <td>{{employee.id}}</td>
+        <td>{{employee.username}}</td>
+        <td>{{employee.firstname}}</td>
+        <td>{{employee.lastname}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.birthdate | date: 'dd/MM/yyyy'}}</td>
+        <td>{{employee.basicsalary | currency:'Rp ':'symbol':'3.0'}}</td>
+        <td>{{employee.status}}</td>
+        <td>{{employee.group}}</td>
+        <td>{{employee.description | date: 'dd/MM/yyyy'}}</td>
+        <td>
+          <button class="btn btn-success mx-2" routerLink="/employee-detail/{{employee.id}}"><i class="fa fa-eye"></i></button>
+          <button class="btn btn-warning mx-2" (click)="edit()"><i class="fa fa-edit text-white"></i></button>
+          <button class="btn btn-danger mx-2" (click)="delete()"><i class="fa fa-trash"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
+</div>

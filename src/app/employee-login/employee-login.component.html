@@ -1,0 +1,26 @@
+<div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh">
+    <div class="card col-md-4">
+      <div class="card-body" style="background-color: beige;">
+        <form class="row">
+          <h1 class="text-center">Login Page</h1>
+          <h6 class="text-center">Please enter email and password</h6>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
+              <small class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*email is required</small>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput2" class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password" placeholder="Your Password">
+              <small class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*password is required</small>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary mb-2" [disabled]="!loginForm.valid" type="submit">Login</button>
+            </div>
+            <a routerLink="/signup">New user? click to Signup!</a>
+          </form>
+        </form>
+      </div>
+    </div>
+  </div>

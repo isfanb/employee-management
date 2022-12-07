@@ -1,0 +1,31 @@
+<div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card col-md-4">
+      <div class="card-body" style="background-color: beige;">
+        <form class="row">
+          <h1 class="text-center">Signup Page</h1>
+          <h6 class="text-center">Register your account</h6>
+          <form [formGroup]="signupForm" (ngSubmit)="signup()">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Fullname</label>
+                <input type="text" class="form-control" formControlName="fullname" placeholder="Your name">
+                <small class="text-danger" *ngIf="signupForm.controls['fullname'].dirty && signupForm.hasError('required','fullname')">*fullname is required</small>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
+                <small class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">*email is required</small>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Your Password">
+                <small class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*password is required</small>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary mb-2" [disabled]="!signupForm.valid" type="submit">Signup</button>
+              </div>
+              <a routerLink="/login">Already register? click to Login!</a>
+          </form>
+        </form>
+      </div>
+    </div>
+  </div>

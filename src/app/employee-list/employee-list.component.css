@@ -1,0 +1,4 @@
+::ng-deep .ngx-pagination .current {
+    background: beige !important;
+    color: #222 !important;
+}
